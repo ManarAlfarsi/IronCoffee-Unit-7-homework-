@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CoffeeService } from 'src/app/services/coffee.service'; 
+import { CoffeeService } from 'src/app/services/coffee.service';
 
 @Component({
   selector: 'app-random-coffee',

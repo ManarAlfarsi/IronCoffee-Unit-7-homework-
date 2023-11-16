@@ -42,14 +42,14 @@ export class coffee {
         this._name = value;
     }
     constructor(
-       private _name: string,
-       private _tagline: string , 
-       private _description: string ,
-       private _firstRoasted: string , 
-       private _roasterTips: string ,
-       private _strengthLevel: number ,
-       private _contributedBy: string  ,
- 
-    ) {}
+        private _name: string,
+        private _tagline: string,
+        private _description: string,
+        private _firstRoasted: string,
+        private _roasterTips: string,
+        private _strengthLevel: number,
+        private _contributedBy: string,
+
+    ) { }
 
 }

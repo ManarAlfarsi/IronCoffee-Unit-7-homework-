@@ -1,8 +1,10 @@
-
 <div class="welcome-card">
- 
-  <mat-card-title level="2">Welcome to IronCoffee</mat-card-title>
-  
+
+  <mat-card-title level="2"
+    [ngStyle]="{ 'font-family': 'system-ui', 'font-size': '35px', 'color': 'rgb(26, 72, 120)',  'font-weight': 'bold'}">Welcome
+    to IronCoffee</mat-card-title>
+
+
   <mat-card-content>
     <div class="d-flex flex-wrap justify-content-center">
       <mat-card class="coffee-card">
@@ -12,7 +14,7 @@
         <mat-card-content>
           <img mat-card-image src="assets/coffees.jpg" alt="All Coffees" width="50%">
           <p>A list of all coffee in the database</p>
-          <a mat-button routerLink="/coffees">Details</a>
+          <a mat-button routerLink="/coffees">All Coffees</a>
         </mat-card-content>
       </mat-card>
 
@@ -40,5 +42,3 @@
     </div>
   </mat-card-content>
 </div>
-
- 

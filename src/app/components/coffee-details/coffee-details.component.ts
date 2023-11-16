@@ -14,38 +14,37 @@ export class CoffeeDetailsComponent implements OnInit {
   coffeeProp: coffee;
 
   @Input()
-  id:string;
-  
+  id: string;
+
   @Input("name")
-  name:any;
-  
-  constructor(private  coffeeService: CoffeeService, private activateRoute: ActivatedRoute ){
-    this.id="";
-    this.coffeeProp = new coffee("","","","","",0,"");
+  name: any;
+
+  constructor(private coffeeService: CoffeeService, private activateRoute: ActivatedRoute) {
+    this.id = "";
+    this.coffeeProp = new coffee("", "", "", "", "", 0, "");
   }
 
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     this.id = this.activateRoute.snapshot.params["id"];
-console.log(this.id);
+    console.log(this.id);
     if (this.id) {
-       this.getCoffeeById();
-     } else if
+      this.getCoffeeById();
+    } else if
       (this.coffeeProp) {
       this.coffee = this.coffeeProp;
-     }
-     }
+    }
+  }
 
-getCoffeeById() { 
-  this.coffeeService.getCoffeeById(this.id).subscribe({ 
-    next: (data) => { 
-      console.log(data); 
-      this.coffee = data; 
-    }, 
-    error: (e) => { 
-      console.log(e);         
-    } 
-  }) 
-}
-
+  getCoffeeById() {
+    this.coffeeService.getCoffeeById(this.id).subscribe({
+      next: (data) => {
+        console.log(data);
+        this.coffee = data;
+      },
+      error: (e) => {
+        console.log(e);
+      }
+    })
+  }
 }

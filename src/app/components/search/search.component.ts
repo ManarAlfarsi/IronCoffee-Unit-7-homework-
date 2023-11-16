@@ -10,16 +10,21 @@ export class SearchComponent {
   @Output()
   searchTextEvent: EventEmitter<string>;
 
-  queryName: string;
-  coffees: any[];
+  queryName: string = '';
+  coffees: any[] = [];
 
   constructor(private coffeeService: CoffeeService) {
-    this.queryName = '';
-    this.coffees = [];
     this.searchTextEvent = new EventEmitter<string>();
   }
 
   search() {
-    this.searchTextEvent.emit(this.queryName);
+    this.coffeeService.search(this.queryName).subscribe(
+      (data) => {
+        this.coffees = data;
+      },
+      (error) => {
+        console.error('Error', error);
+      }
+    );
   }
 }
