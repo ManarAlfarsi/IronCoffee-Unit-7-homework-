@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<mat-card class="coffee-card">
+  <mat-card-header>
+    <mat-card-title>{{ coffee.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <img mat-card-image src="{{ coffee.image_url }}" alt="Coffee Image">
+     <mat-card-subtitle>First Roasted: {{ coffee.first_roasted }}</mat-card-subtitle>
+     <mat-card-subtitle>Contributed by: {{ coffee.contributed_by }}</mat-card-subtitle>
+     <mat-card-subtitle>Strength Level: {{ coffee.strength_level }}</mat-card-subtitle>
+    <p>Description: {{ coffee.description }}</p>
+    <p>Tagline: {{ coffee.tagline }}</p>
+  </mat-card-content>
+</mat-card>
+
+
+
